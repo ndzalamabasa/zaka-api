@@ -15,16 +15,6 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use('/budgets', budgetRoutes);
 
-app.get('/api', (req, res) => {
-  res.status(200);
-  res.json({ message: 'node working' });
-});
-
-app.get('/', (req, res) => {
-  res.status(200);
-  res.json({ message: 'Zaka API' });
-});
-
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
